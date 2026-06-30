@@ -1,0 +1,172 @@
+/* App.css - Enhanced visibility */
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: #fff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+
+.App {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px 20px;
+  max-width: 1400px;
+  margin: auto;
+}
+
+/* Header styling */
+.App-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.App-header h1 {
+  font-size: 3.2rem;
+  font-weight: 900;
+  letter-spacing: 2px;
+  background: linear-gradient(90deg, #fbc7c7, #7579ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 10px;
+}
+
+.App-header p {
+  font-size: 1.2rem;
+  opacity: 0.9;
+  color: #fff;
+}
+
+/* Main layout for panels */
+.main-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  width: 100%;
+  justify-content: center;
+}
+
+/* Left panel styling */
+.left-panel {
+  flex: 1 1 250px;
+  background: rgba(255,255,255,0.15);
+  border-radius: 20px;
+  padding: 25px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.2);
+}
+
+.left-panel h3 {
+  color: #fff;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+/* Center panel styling */
+.center-panel {
+  flex: 2 1 600px;
+  background: rgba(255,255,255,0.15);
+  border-radius: 20px;
+  padding: 25px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 500px;
+  border: 1px solid rgba(255,255,255,0.2);
+}
+
+/* Fancy button style */
+.fancy-button {
+  background-image: linear-gradient(135deg, #667eea, #764ba2);
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.2rem;
+  padding: 15px 40px;
+  margin: 10px 0;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 6px 20px rgba(118, 75, 162, 0.4);
+  transition: all 0.4s ease;
+  letter-spacing: 1.2px;
+}
+
+.fancy-button:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(118, 75, 162, 0.75);
+}
+
+.fancy-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  box-shadow: none;
+  transform: none;
+}
+
+/* Feedback Panel Styles */
+.feedback-panel {
+  margin-top: 20px;
+  max-height: 350px;
+  overflow-y: auto;
+  background: rgba(0,0,0,0.2);
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: inset 0 4px 10px rgba(0, 0, 0, 0.2);
+  font-weight: 600;
+  color: #fff;
+  backdrop-filter: blur(8px);
+}
+
+.feedback-panel h3 {
+  color: #fff;
+  margin-bottom: 15px;
+}
+
+.feedback-item {
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 15px rgba(255,255,255,0.1);
+  padding: 15px;
+  border-left: 4px solid #fbc7c7;
+  border-radius: 12px;
+  margin-bottom: 12px;
+  animation: fadeInUp 0.4s ease forwards;
+  opacity: 0;
+  transform: translateY(20px);
+  color: #fff;
+  font-weight: 600;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Footer */
+.App-footer {
+  margin-top: 40px;
+  text-align: center;
+  color: rgba(255,255,255,0.8);
+  font-size: 0.9rem;
+}
+
+/* Responsive layout adjustments */
+@media(max-width: 900px) {
+  .main-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .left-panel, .center-panel {
+    max-width: 90%;
+  }
+}

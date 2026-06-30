@@ -1,0 +1,10 @@
+.pose-detector {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 20px;
+}
+.pose-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+}

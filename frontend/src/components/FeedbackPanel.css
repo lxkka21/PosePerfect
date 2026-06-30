@@ -1,0 +1,52 @@
+.feedback-panel {
+  margin-top: 20px;
+  background-color: white;
+  padding: 20px;
+  border-radius: 12px;
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.feedback-panel h3 {
+  color: #764ba2;
+  font-weight: 700;
+  margin-bottom: 15px;
+  font-size: 1.2rem;
+}
+
+.no-feedback {
+  text-align: center;
+  padding: 30px 10px;
+  color: #666;
+  font-weight: 600;
+}
+
+.feedback-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.feedback-item {
+  background-color: #f5f5f5;
+  border-left: 4px solid #764ba2;
+  border-radius: 8px;
+  padding: 15px;
+}
+
+.feedback-header {
+  margin-bottom: 8px;
+}
+
+.joint-name {
+  color: #764ba2;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.feedback-message {
+  color: #333;
+  font-weight: 500;
+  font-size: 0.95rem;
+  margin: 0;
+}

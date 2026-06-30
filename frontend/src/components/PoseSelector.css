@@ -1,0 +1,14 @@
+.pose-selector {
+  border-radius: 12px;
+  background: white;
+  padding: 15px;
+}
+.pose-button {
+  margin: 5px 0;
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+.pose-button.active {
+  background-color: #667eea;
+  color: white;
+}
