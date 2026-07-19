@@ -2,6 +2,7 @@ import React, { useRef, useEffect, useState } from 'react';
 import Webcam from 'react-webcam';
 import { POSE_CONNECTIONS } from '@mediapipe/pose';
 import './PoseDetector.css';
+import API_BASE_URL from '../config';
 
 const PoseDetector = ({ selectedPose, onFeedbackUpdate, onDetectionStateChange }) => {
   const webcamRef = useRef(null);
@@ -9,7 +10,6 @@ const PoseDetector = ({ selectedPose, onFeedbackUpdate, onDetectionStateChange }
   const [isWebcamActive, setIsWebcamActive] = useState(false);
   const [isProcessing, setIsProcessing] = useState(false);
   const [detectionInterval, setDetectionInterval] = useState(null);
-  const API_URL = 'http://localhost:5000';
 
   const videoConstraints = {
     width: 640,
@@ -48,7 +48,7 @@ const PoseDetector = ({ selectedPose, onFeedbackUpdate, onDetectionStateChange }
     }
 
     try {
-      const response = await fetch(`${API_URL}/api/detect-pose`, {
+      const response = await fetch(`${API_BASE_URL}/api/detect-pose`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ image: imageSrc, pose: selectedPose })

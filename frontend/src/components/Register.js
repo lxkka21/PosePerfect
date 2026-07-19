@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import API_BASE_URL from '../config';
 
 function Register({ switchToLogin }) {
   const [username, setUsername] = useState('');
@@ -7,7 +8,7 @@ function Register({ switchToLogin }) {
   const [successMsg, setSuccessMsg] = useState('');
 
   const registerUser = async () => {
-    const response = await fetch('http://localhost:5000/api/register', {
+    const response = await fetch(`${API_BASE_URL}/api/register`, {
       method: 'POST',
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify({ username, password }),

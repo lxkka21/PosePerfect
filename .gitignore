@@ -43,3 +43,5 @@ coverage/
 
 # Misc
 *.tsbuildinfo
+.helix/
+target/
